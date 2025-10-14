@@ -1,72 +1,195 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Tomasz Nowak</title>
-    <link rel="stylesheet" href="StronaCV.css">
-</head>
-<body>
-    <div class="container">
-        <aside>
-            <img src="profile-photo.jpg" alt="Zdjęcie profilowe Tomasza Nowaka" class="profile">
-            
-            <div class="line"></div>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            <section>
-                <h3>Kontakt</h3>
-                <p><strong>E-mail:</strong><br>
-                <a href="mailto:tomasz.nowak@box.com">tomasz.nowak@box.com</a></p>
-                <p><strong>Telefon:</strong><br>
-                <a href="tel:+48543210000">+48 543 210 000</a></p>
-                <p><strong>Data urodzenia:</strong><br>02.03.1994</p>
-                <p><strong>Miasto:</strong><br>Warszawa</p>
-                <p><span class="highlight">Gotowy do relokacji</span></p>
-            </section>
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+}
 
-            <section>
-                <h3>Języki</h3>
-                <p>angielski:<br>zaawansowany (poziom C1)</p>
-            </section>
-            
-            <section>
-                <h3>Umiejętności</h3>
-                <p>zaawansowana obsługa:<br>MS Office (Word, Excel)<br>Photoshop</p>
-            </section>
-        </aside>
+.container {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
 
-        <main>
-            <header>
-                <p class="cv-label">CV</p>
-                <h1>Tomasz Nowak</h1>
-            </header>
-            
-            <p class="intro">Jestem absolwentem dziennikarstwa. Pierwsze doświadczenia zdobywałem w ogólnokrajczym tygodniku. Swój rozwój zawodowy wiążę z zawartym marketingiem.</p>
-            
-            <h2>Wykształcenie</h2>
-            
-            <article class="item">
-                <p class="date">10.2018 – obecnie | <span class="blue">6 mies.</span></p>
-                <p class="bold">Szkoła Główna Handlowa</p>
-                <p>Kierunek: dziennikarstwo i medioznawstwo<br>Poziom wykształcenia: studio podyplomowe</p>
-            </article>
-            
-            <article class="item">
-                <p class="date">10.2012 – 06.2016 | <span class="blue">4 lat</span></p>
-                <p class="bold">Uniwersytet Warszawski</p>
-                <p>Kierunek: dziennikarstwo i medioznawstwo<br>Specjalność: public relations i marketing medialny<br>Poziom wykształcenia: magister</p>
-            </article>
-            
-            <h2>Doświadczenie zawodowe</h2>
-            
-            <article class="item">
-                <p class="date">01.2017 – obecnie | <span class="blue">1 rok</span></p>
-                <p class="bold">Reporter – praktykant | Tygodnik "Ten i ten"</p>
-                <p><span class="highlight">Krótki opis stanowiska:</span><br>
-                - Zbieranie informacji i przeprowadzanie wywiadów<br>
-                - Przyjmowanie telefonów od czytelników</p>
-            </article>
-        </main>
-    </div>
-</body>
-</html>
+aside {
+    padding: 20px;
+    flex: 0 0 200px;
+    flex-shrink: 0;
+}
+
+.profile {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #6366f1;
+    margin: 15px 0;
+}
+
+aside section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #6366f1;
+}
+
+aside section:last-child {
+    border-bottom: none;
+}
+
+aside h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+aside p {
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+aside a {
+    color: #6366f1;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1 1 300px;
+    max-width: 450px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    min-width: 0;
+}
+
+header {
+    border-bottom: 1px solid #6366f1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #6366f1;
+}
+
+.cv-label {
+    font-size: 13px;
+    padding-top: 0;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.intro {
+    color: #6366f1;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 25px 0 10px 0;
+    padding-top: 8px;
+    border-top: 1px solid #6366f1;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.date {
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.blue {
+    color: #6366f1;
+}
+
+.bold {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+main p {
+    line-height: 1.5;
+}
+
+.highlight {
+    color: #6366f1;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    aside {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    main {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .profile {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    aside,
+    main {
+        padding: 15px;
+    }
+
+    .profile {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+  h1 {
+    font-size: 36px;
+  }
+}
